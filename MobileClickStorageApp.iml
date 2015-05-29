@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="ClickSaver">
     <configurations>
-      <configuration name="ClickSaver" target-platform="Mobile" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/ClickSaver">
+      <configuration name="ClickSaver" main-class="Main" output-file="ClickSaver.swf" output-folder="$MODULE_DIR$/out">
         <dependencies target-player="11.1">
           <entries>
             <entry library-name="Flox-AS3" library-level="project">
@@ -22,8 +22,8 @@
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
-        <packaging-android enabled="true" package-file-name="Main" />
-        <packaging-ios enabled="true" package-file-name="Main" />
+        <packaging-android />
+        <packaging-ios />
       </configuration>
     </configurations>
     <compiler-options />
