@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                            xmlns:s="library://ns.adobe.com/flex/spark"
+                            creationComplete="setupContext();"
+                            firstView="view.screen.ui.IntroScreen">
+
+    <fx:Script><![CDATA[
+        import com.gamua.flox.Flox;
+
+        import robotlegs.bender.bundles.mvcs.MVCSBundle;
+        import robotlegs.bender.extensions.contextView.ContextView;
+        import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
+        import robotlegs.bender.framework.api.IContext;
+        import robotlegs.bender.framework.impl.Context;
+
+        protected var context:IContext;
+
+        /**
+         * Sets up the Robotlegs context.
+         */
+        private function setupContext():void {
+
+            context = new Context()
+                    .install(MVCSBundle, SignalCommandMapExtension)
+                    .configure(AppConfig)
+                    .configure(new ContextView(this));
+
+
+            Flox.init("qkVGOkJ5EkEDh17t", "tGu3ParlKqVNGU0S", "1.0");
+
+        }
+        ]]></fx:Script>
+
+
+</s:ViewNavigatorApplication>
